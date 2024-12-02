@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Singha Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(to bottom, #001a00, #003300);
+            color: #fff;
+        }
+        
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 30px;
+    background: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    margin: 0;
+}
+
+.gamepad-logo {
+    width: 80px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.header-info {
+    flex: 1;
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 3.5em;
+    color: #0f0;
+    text-shadow: 1px 1px 6px rgba(0, 255, 0, 0.7);
+}
+
+.header-info p {
+    margin: 5px 0 10px;
+    font-size: 1.5em;
+    color: #8f8;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#game-container {
+    width: 800px;
+    height: 300px;
+    border: 1px solid #fff;
+}
+        .section-title {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.4em;
+            text-transform: uppercase;
+            color: #8f8;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .project-info {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .project-logo {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            border: 3px solid #0f0;
+            margin-right: 20px;
+            box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+            object-fit: cover;
+        }
+        .project-details {
+            flex: 1;
+        }
+        .project-name {
+            font-size: 2.5em;
+            margin: 0;
+            color: #0f0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+        .project-type {
+            font-size: 1.4em;
+            color: #8f8;
+            margin-top: 10px;
+        }
+        .carousel-container {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .carousel img {
+            max-height: 300px;
+            min-width: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .download-button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.3em;
+            background: #0a0;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        .download-button:hover {
+            background: #0f0;
+            color: black;
+            transform: scale(1.05);
+        }
+        .contact {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0, 255, 0, 0.1);
+            color: #000;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .hire-me {
+            font-size: 2.5em;
+            color: #0f0;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+        .contact .info {
+            margin-top: 10px;
+            font-size: 1.4em;
+            color: #8f8;
+        }
+        .contact .info a {
+            color: #0f0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .contact .info a:hover {
+            color: #fff;
+        }
+
+        .button-container button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.3em;
+    font-family: 'Orbitron', sans-serif; /* Added font family */
+    font-weight: 700; /* Added font weight to match the imported font */
+    background: #0a0;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+    background: #0f0;
+    color: black;
+    transform: scale(1.05);
+}
+
+
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 768px) {
+    /* Header styles */
+    header {
+        background-color: #000;
+        color: #fff;
+        padding: 33px; /* Reduced padding */
+        text-align: center;
+        height: 50vh; /* Reduced height */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center content vertically */
+    }
+
+    .header-info h1 {
+        font-size: 2.5em;
+    }
+
+    .header-info p {
+        font-size: 1.2em;
+    }
+
+    
+
+    /* Game section styles */
+    .game-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Ensure section spans the full width */
+    }
+
+    #game-container {
+        order: 1; /* Ensure this comes first */
+        width: 80vw;
+        height: 30vh;
+        border: 1px solid #fff;
+        margin-bottom: 20px; /* Add space below the game container */
+    }
+
+    #game-container canvas {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    #game-title-image{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    
+
+    /* Button styles */
+    .button-container {
+        order: 2; /* Ensure buttons come after the game container */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px; /* Add spacing between buttons */
+        margin-top: -20px; /* Add spacing above buttons */
+        width: 100%; /* Ensure buttons are centered relative to the container */
+    }
+
+    .button-container button {
+        padding: 8px 15px;
+        font-size: 1em;
+        background: #0a0;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(0, 255, 0, 0.5);
+        transition: all 0.3s ease;
+        font-family: 'Orbitron', sans-serif; /* Added font family */
+        font-weight: 700; /* Added font weight to match the imported font */
+    }
+
+    .button-container button:hover {
+        background: #0f0;
+        color: black;
+        transform: scale(1.05);
+    }
+
+    /* Project section styles */
+    /* Project section styles */
+.project {
+    margin: 20px 0; /* Reduced margin */
+    padding: 15px; /* Reduced padding */
+    width: 90%; /* Reduced width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project a {
+    padding: 5px 10px; /* Reduced button size */
+    font-size: 0.8em; /* Reduced font size */
+}
+
+    .project-logo {
+        width: 100px; /* Reduced logo size */
+        height: 100px;
+        border-radius: 15px;
+        border: 2px solid #0f0; /* Reduced border size */
+        margin-right: 15px; /* Reduced margin */
+    }
+
+    .project-details {
+        flex: 1;
+    }
+
+    .project-name {
+        font-size: 1.8em; /* Reduced font size */
+    }
+
+    .project-type {
+        font-size: 1.2em; /* Reduced font size */
+    }
+
+    .carousel-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px; /* Reduced border radius */
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .carousel img {
+        max-height: 150px; /* Reduced image height */
+        min-width: 100%;
+        object-fit: cover;
+        border-radius: 10px; /* Reduced border radius */
+    }
+
+    /* Contact section styles */
+    .contact {
+        padding: 15px; /* Reduced padding */
+        font-size: 1em; /* Reduced font size */
+    }
+
+    .hire-me {
+        font-size: 1.5em; /* Reduced font size */
+    }
+
+    .info {
+        font-size: 0.9em; /* Reduced font size */
+    }
+}
+/* Desktop-specific styles */
+@media only screen and (min-width: 769px) {
+    #moveUp, #moveDown {
+        display: none; /* Hide the Up and Down buttons on desktop */
+    }
+    #startButton {
+        position: absolute; /* Position the Start button absolutely */
+        top: 0px; /* Set the top position */
+        right: 0px; /* Set the right position */
+        display: block; /* Show the Start button on desktop */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/gamepad-logo.png" alt="Gamepad Logo" class="gamepad-logo">
+        <div class="header-info">
+            <h1>Rahul Singha</h1>
+            <p>Game Developer</p>
+        </div>
+        <div class="button-container">
+            <button id="startButton">Start</button>
+            <button id="moveUp">Up</button>
+            <button id="moveDown">Down</button>
+            <button id="restartButton" style="display:none;">Restart</button>
+        </div>
+        <div id="game-container">
+            <img src="images/gametitle.png" alt="Game Title" id="game-title-image">
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">Projects</h2>
+        <div id="projects-container"></div>
+    </section>
+
+    <script>
+        // Array of projects
+        const projects = [
+            {
+                type: "2D",
+                name: "Kiddo! Little Learners",
+                year: 2023,
+                description: "Full Game, Android",
+                logo: "kiddo-logo.png",
+                screenshots: ["kiddo1.png", "kiddo2.png", "kiddo3.png", "kiddo4.png"],
+                downloadLink: "#"
+            },
+            {
+                type: "3D",
+                name: "PaperPanic",
+                year: 2024,
+                description: "Puzzle Adventure Game",
+                logo: "paperpanic-logo.png",
+                screenshots: ["paperpanic1.png", "paperpanic2.png", "paperpanic3.png"],
+                downloadLink: "#"
+            },
+            {
+                type: "3D",
+                name: "Adventures of Diamond",
+                year: 2024,
+                description: "Adventure Game",
+                logo: "diamond-logo.png",
+                screenshots: ["diamond1.png", "diamond2.png", "diamond3.png"],
+                downloadLink: "#"
+            },
+            {
+                type: "Puzzle",
+                name: "PROTO",
+                year: 2024,
+                description: "Puzzle-solving Game",
+                logo: "proto-logo.png",
+                screenshots: ["proto1.png", "proto2.png"],
+                downloadLink: "#"
+            },
+            {
+                type: "Racing",
+                name: "Track Turbo Throttle",
+                year: 2024,
+                description: "Racing Game",
+                logo: "track-turbo-logo.png",
+                screenshots: ["trackturbo1.png", "trackturbo2.png", "trackturbo3.png"],
+                downloadLink: "#"
+            }
+        ];
+
+        // Function to shuffle the array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            }
+        }
+
+        // Function to create the carousel for project screenshots
+        function createCarousel(screenshots) {
+    const carouselContainer = document.createElement("div");
+    carouselContainer.className = "carousel-container";
+
+    const carousel = document.createElement("div");
+    carousel.className = "carousel";
+
+    screenshots.forEach((src, index) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = `Screenshot ${index + 1}`;
+        carousel.appendChild(img);
+    });
+
+    carouselContainer.appendChild(carousel);
+
+    let currentIndex = 0;
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        currentIndex = (currentIndex + 1) % screenshots.length;
+    }
+
+    setInterval(updateCarousel, 3000); // Change every 3 seconds
+    return carouselContainer;
+}
+
+            // Function to display projects on the page
+            function displayProjects() {
+                const container = document.getElementById("projects-container");
+                shuffleArray(projects); // Shuffle the projects order
+
+                projects.forEach(project => {
+                    const projectDiv = document.createElement("div");
+                    projectDiv.className = "project";
+
+                    const projectInfo = document.createElement("div");
+                    projectInfo.className = "project-info";
+
+                    const projectLogo = document.createElement("img");
+                    projectLogo.className = "project-logo";
+                    projectLogo.src = project.logo;
+                    projectLogo.alt = project.name;
+
+                    const projectDetails = document.createElement("div");
+                    projectDetails.className = "project-details";
+
+                    const projectName = document.createElement("h3");
+                    projectName.className = "project-name";
+                    projectName.textContent = project.name;
+
+                    const projectType = document.createElement("p");
+                    projectType.className = "project-type";
+                    projectType.textContent = `${project.type} | ${project.year}`;
+
+                    const projectDescription = document.createElement("p");
+                    projectDescription.textContent = project.description;
+
+                    const carousel = createCarousel(project.screenshots);
+
+                    const downloadButton = document.createElement("a");
+                    downloadButton.className = "download-button";
+                    downloadButton.href = project.downloadLink;
+                    downloadButton.textContent = "Download Game";
+
+                    projectDetails.appendChild(projectName);
+                    projectDetails.appendChild(projectType);
+                    projectDetails.appendChild(projectDescription);
+                    projectDetails.appendChild(carousel);
+                    projectInfo.appendChild(projectLogo);
+                    projectInfo.appendChild(projectDetails);
+
+                    projectDiv.appendChild(projectInfo);
+                    projectDiv.appendChild(downloadButton);
+
+                    container.appendChild(projectDiv);
+                });
+            }
+
+            // Call the function to display projects
+            displayProjects();
+        </script>
+    </section>
+
+    <section>
+        <div class="contact">
+            <p class="hire-me">HIRE ME</p>
+            <p class="info">Email: <a href="mailto:rahulleo2000@gmail.com">rahulleo2000@gmail.com</a></p>
+            <p class="info">Phone: <a href="tel:+918388086818">+91 83880 86818</a></p>
+            <p class="info">GitHub: <a href="https://www.github.com/RahulS139" target="_blank">RahulS139</a></p>
+            <p class="info">LinkedIn: <a href="https://linkedin.com/in/rahulsinghaind" target="_blank">rahulsinghaind</a></p>
+
+        </div>
+    </section>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
